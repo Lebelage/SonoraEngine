@@ -1,0 +1,36 @@
+Language: Cpp
+BasedOnStyle: Microsoft
+
+# Основные настройки отступов
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Позволяет парсить самый свежий стандарт C++
+Standard: Latest
+
+# Включаем отступы внутри пространств имен (убирает "плоский" вид кода)
+NamespaceIndentation: All
+
+# Настройка фигурных скобок
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: Never
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeElse: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+# Выравнивание указателей влево: GLFWwindow* window_
+PointerAlignment: Left
+
+# Ограничение длины строки
+ColumnLimit: 110
