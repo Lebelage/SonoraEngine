@@ -1,6 +1,6 @@
-export module Sonora.Engine.Platform.Window;
+export module sonora.engine.platform.window;
 import std;
-import Sonora.Engine.ThirdParty.GLFW;
+import sonora.engine.third_party.glfw;
 export namespace sonora::engine::platform
 {
     struct WindowSize

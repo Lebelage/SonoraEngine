@@ -1,4 +1,5 @@
-module Sonora.Engine.Platform.Window;
+module sonora.engine.platform.window;
+import sonora.engine.core.engine_definitions;
 namespace sonora::engine::platform
 {
     struct Window::Impl
@@ -19,7 +20,8 @@ namespace sonora::engine::platform
     std::expected<void, std::string> Window::Initialize(const WindowDescription& description)
     {
         if (!glfwInit())
-            return std::unexpected("Window initialization error");
+            return std::unexpected(
+                std::string(sonora::engine::core::constants::EngineDefinitions::WINDOW_INIT_ERROR));
 
         glfwWindowHint(glfw::ClientApi, glfw::NoApi);
 
@@ -28,7 +30,8 @@ namespace sonora::engine::platform
 
         if (!impl_->window_) {
             glfwTerminate();
-            return std::unexpected("Window initialization error");
+            return std::unexpected(
+                std::string(sonora::engine::core::constants::EngineDefinitions::WINDOW_INIT_ERROR));
         }
 
         glfwSetWindowUserPointer(impl_->window_, impl_.get());

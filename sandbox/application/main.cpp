@@ -1,9 +1,11 @@
-import Sonora.Engine.Platform.Window;
+import sonora.engine.rhi.vulkan.device;
 import std;
-int main() {
-  std::cout << "Hello, Sonora Engine!" << std::endl;
-  std::vector<int> numbers = {1, 2, 3, 4, 5};
+int main()
+{
+    std::cout << "Hello, Sonora Engine!" << std::endl;
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
 
-  sonora::engine::platform::WindowSize windowSize{.width = 800, .height = 600};
-  return 0;
+    sonora::engine::rhi::vulkan::VkDevice device;
+    device.Initialize();
+    return 0;
 }

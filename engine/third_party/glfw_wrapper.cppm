@@ -1,7 +1,7 @@
 module;
 #include <GLFW/glfw3.h>
 
-export module Sonora.Engine.ThirdParty.GLFW;
+export module sonora.engine.third_party.glfw;
 
 export using ::GLFWwindow;
 export using ::glfwInit;
@@ -15,6 +15,7 @@ export using ::glfwGetFramebufferSize;
 export using ::glfwSetWindowUserPointer;
 export using ::glfwGetWindowUserPointer;
 export using ::glfwSetFramebufferSizeCallback;
+export using ::glfwGetRequiredInstanceExtensions;
 
 export namespace sonora::engine::glfw
 {
